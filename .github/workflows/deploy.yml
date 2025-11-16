@@ -23,8 +23,8 @@ jobs:
               run: npm i
 
             - name: Build
-              # env:
-                  # BASE_PATH: '/${{ github.event.repository.name }}'
+              env:
+                  BASE_PATH: '/${{ github.event.repository.name }}'
               run: |
                   npm run build --verbose
 
