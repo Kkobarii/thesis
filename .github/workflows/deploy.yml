@@ -28,10 +28,13 @@ jobs:
               run: |
                   npm run build
 
+            - name: Prepare artifact
+              run: cp -r dist build
+
             - name: Upload Artifacts
               uses: actions/upload-pages-artifact@v3
-              # with:
-              #     path: 'build/'
+              with:
+                  path: 'build/'
 
     deploy:
         needs: build_site
