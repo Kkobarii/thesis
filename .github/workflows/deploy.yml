@@ -23,18 +23,15 @@ jobs:
               run: npm i
 
             - name: Build
-              env:
-                  BASE_PATH: '/${{ github.event.repository.name }}'
+              # env:
+                  # BASE_PATH: '/${{ github.event.repository.name }}'
               run: |
-                  npm run build
-
-            - name: Prepare artifact
-              run: cp -r dist build
+                  npm run build --verbose
 
             - name: Upload Artifacts
               uses: actions/upload-pages-artifact@v3
               with:
-                  path: 'build/'
+                  path: './build'
 
     deploy:
         needs: build_site
