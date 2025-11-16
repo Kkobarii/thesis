@@ -1,38 +1,23 @@
-# sv
+[![Build and Deploy](https://github.com/Kkobarii/thesis/actions/workflows/deploy.yml/badge.svg)](https://github.com/Kkobarii/thesis/actions/workflows/deploy.yml)
+[![Bachelor](https://github.com/Kkobarii/bachelor-thesis/actions/workflows/compile.yml/badge.svg)](https://github.com/Kkobarii/bachelor-thesis/actions/workflows/compile.yml)
+[![Master](https://github.com/Kkobarii/master-thesis/actions/workflows/compile.yml/badge.svg)](https://github.com/Kkobarii/master-thesis/actions/workflows/compile.yml)
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+# My Thesis Repository
 
-## Creating a project
+A simple SvelteKit-based website for hosting a showcase of my bachelor and master theses.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## How to Run
 
-```sh
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+The startup of the development server is just as simple as the website itself. Just make sure you have [Node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) installed, and then run the following command in your terminal:
 
 ```sh
+npm install
+
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+## Continuous Integration
 
-To create a production version of your app:
+This repo uses GitHub Actions for continuous integration and deployment. My two thesis repos ([bachelor](https://github.com/Kkobarii/bachelor-thesis) and [master](https://github.com/Kkobarii/master-thesis)) have their own workflows for compiling the final pdf documents, which they push here, so they are always up to date.
 
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Well, look at how much time I spent setuping all this automation instead of working on my thesis... :D
